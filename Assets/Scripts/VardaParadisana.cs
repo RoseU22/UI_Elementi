@@ -20,7 +20,7 @@ public class VardaParadisana : MonoBehaviour {
 
 	//Mainígais, kurá ieglabás tekstu no input field
 	private string teksts;
-	private string[] varianti = {"Sveiks ", "Jauku dienu ", "Prieks tevi redzét ", "UZredzéśanos"};
+	private string[] varianti = {"Sveiks ", "Jauku dienu ", "Prieks tevi redzét ", "Uzredzéśanos "};
 
 	//Uzglabás noǵeneréto random skaitli
 	int nejausais;
@@ -29,6 +29,7 @@ public class VardaParadisana : MonoBehaviour {
 	public GameObject ievadesLauks;
 	//Text, kurá attélos tekstu
 	public GameObject tekstaAttelosana;
+
 
 	public void UzglabatTekstu(){
 		nejausais = Random.Range (0, varianti.Length);
