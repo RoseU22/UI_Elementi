@@ -11,6 +11,8 @@ public class AtteluParadisana : MonoBehaviour {
     public GameObject Car;
 	public GameObject PaKreisi;
 	public GameObject PaLabi;
+	public GameObject mainigaisAttels;
+	public Sprite[] atteluMasivs;
 
     public void BeanAttels(bool vertiba)
     {
@@ -40,5 +42,14 @@ public class AtteluParadisana : MonoBehaviour {
 
 	public void PaLabiBean(){
 		Bean.transform.localScale = new Vector2 (-1, 1);
+	}
+
+	public void Izkritosais(int indekss){
+		if (indekss == 0)
+			mainigaisAttels.GetComponent<Image> ().sprite = atteluMasivs [0];
+		else if (indekss == 1)
+			mainigaisAttels.GetComponent<Image> ().sprite = atteluMasivs [1];
+		else if (indekss == 2)
+			mainigaisAttels.GetComponent<Image> ().sprite = atteluMasivs [2];
 	}
 }
