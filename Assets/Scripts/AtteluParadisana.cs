@@ -13,6 +13,8 @@ public class AtteluParadisana : MonoBehaviour {
 	public GameObject PaLabi;
 	public GameObject mainigaisAttels;
 	public Sprite[] atteluMasivs;
+	public GameObject IzmeraSlaideris;
+	public GameObject RotacijasSlideris;
 
     public void BeanAttels(bool vertiba)
     {
@@ -45,11 +47,23 @@ public class AtteluParadisana : MonoBehaviour {
 	}
 
 	public void Izkritosais(int indekss){
+		
 		if (indekss == 0)
 			mainigaisAttels.GetComponent<Image> ().sprite = atteluMasivs [0];
 		else if (indekss == 1)
 			mainigaisAttels.GetComponent<Image> ().sprite = atteluMasivs [1];
 		else if (indekss == 2)
 			mainigaisAttels.GetComponent<Image> ().sprite = atteluMasivs [2];
+		
+	}
+
+	public void mainitLielumu(){
+		float pasreiziejaisLielums = IzmeraSlaideris.GetComponent<Slider> ().value;
+		mainigaisAttels.transform.localScale = new Vector2 (1f * pasreiziejaisLielums, 1f * pasreiziejaisLielums);
+	}
+
+	public void MainitRotaciju(){
+		float pasreizejaVertiba = RotacijasSlideris.GetComponent<Slider> ().value;
+		mainigaisAttels.transform.localRotation = Quaternion.Euler (0, 0, pasreizejaVertiba * 360);
 	}
 }
